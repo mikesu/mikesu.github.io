@@ -1,0 +1,12 @@
+{{ define "main"}}
+<div class="post">
+	<div class="post-archive">
+		<h2 class="label-title">搜索： <em class="search-keyword"></em></h2>
+		<ul class="search-result-list">
+		</ul>
+	</div>
+</div>
+{{ end }}
+{{ define "extend-js" }}
+	<script type="text/javascript" src="{{ "js/search.js" | relURL}}"></script>
+{{ end }}

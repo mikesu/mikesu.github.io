@@ -1,0 +1,6 @@
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+{{ $style := resources.Get "css/style.scss" | toCSS | minify}}
+<link rel="stylesheet" href="{{ $style.Permalink }}">

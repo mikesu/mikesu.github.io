@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="{{ with .Site.LanguageCode }}{{ . }}{{ else }}zh-CN{{end}}">
+<head>
+	{{ partial "head/metadata" . }}
+	{{ block "extend-meta" . }}{{ end }}
+	{{ partial "head/favicons" . }}
+	{{ partial "head/stylesheet" . }}
+	{{ block "extend-css" . }}{{ end }}
+</head>
+<body>
+    <div class="body_container">
+		<header id="header">
+			{{ partial "header/site-header" . }}
+		    {{ partial "header/site-nav" . }}
+		</header>
+        <div id="layout" class="pure-g">
+            <div class="pure-u-1 pure-u-md-3-4">
+				<main class="content_container">
+					{{ block "main" . }}{{ end }}
+				</main>
+            </div>
+			<div class="pure-u-1-4 hidden_mid_and_down">
+			    <div id="sidebar">
+				    {{ partial "sidebar/search" . }}
+					{{ partial "sidebar/categories" . }}
+					{{ partial "sidebar/recent" . }}
+					{{ partial "sidebar/tags" . }}
+					{{ partial "sidebar/links" . }}
+				</div>
+			</div>
+			<div class="pure-u-1 pure-u-md-3-4">
+				<footer id="footer">
+					{{ partial "footer/site-footer" . }}
+					{{ partial "footer/scripts" . }}
+					{{ block "extend-js" . }}{{ end }}
+				</footer>
+			</div>
+        </div>
+    </div>
+</body>
+</html>

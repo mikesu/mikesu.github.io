@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>docker 使用代理连接 Docker Hub | Mike SU</title>
+<meta property="og:title" content="docker 使用代理连接 Docker Hub - Mike SU">
+<meta property="og:type" content="article">
+	
+<meta property="article:published_time" content='2014-10-30T17:57:23&#43;08:00'>
+	
+	
+<meta property="article:modified_time" content='2014-10-30T17:57:23&#43;08:00'>
+	
+<meta name="Keywords" content="">
+<meta name="description" content="docker 使用代理连接 Docker Hub">
+	
+<meta name="author" content="Mike SU">
+<meta property="og:url" content="http://mikesu.net/31/">
+	
+	<link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="http://mikesu.net/css/style.min.css">
+	
+</head>
+<body>
+    <div class="body_container">
+		<header id="header">
+			<div class="site-name ">
+	
+	<a id="logo" href="http://mikesu.net">Mike SU</a>
+	<p class="description">Note &amp; Blog</p>
+</div>
+		    <nav id="nav-menu">
+	<a class="" href="http://mikesu.net">
+		<i class="fa fa-home"> 首页</i>
+	</a>
+	
+	<a  href="http://mikesu.net/archives/" title="归档">
+		<i class='fa fa-archive'></i> 归档
+	</a>
+	
+	<a  href="http://mikesu.net/about/" title="关于">
+		<i class='fa fa-user'></i> 关于
+	</a>
+	
+</nav>
+		</header>
+        <div id="layout" class="pure-g">
+            <div class="pure-u-1 pure-u-md-3-4">
+				<main class="content_container">
+					
+<article class="post">
+	
+
+	<h1 class="post-title">docker 使用代理连接 Docker Hub</h1>
+	<div class="post-meta">
+	2014年10月30日
+	
+	</div>
+	<div class="post-content">
+		<p>  由于网络和墙的原因，直接连接Docker Hub是非常慢的，有时候还连接不上。所有我们经常需要通过代理来连接Docker Hub。下面用10.125.156.21:8118作为代理进行举例，实际操作时候请修改。</p>
+<h3 id="linux下使用-http-代理连接-docker-中央服务器">Linux下使用 HTTP 代理连接 docker 中央服务器</h3>
+<p>如果你的宿主操作系统是 linux 那方法就很简单了，直接通过命令来启动服务即可。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$sudo HTTP_PROXY=10.125.156.21:8118 HTTPS_PROXY=10.125.156.21:8118 docker -d
+</code></pre></div><p>如果是只是临时使用可以用下面语句</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$sudo HTTP_PROXY=10.125.156.21:8118 HTTPS_PROXY=10.125.156.21:8118 docker pull node
+</code></pre></div><h3 id="boot2docker-使用http代理的方法">Boot2docker 使用HTTP代理的方法</h3>
+<p>  在Windows和Mac下使用 docker 就必须用 boot2docker 来创建一个 Virtual Box 虚拟机提供 Linux 宿主环境。这里用代理就复杂一点。</p>
+<ol>
+<li>登录到Virtual Box的Linux
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">C:\&gt;boot2docker ssh
+</code></pre></div></li>
+<li>修改或者新建/var/lib/boot2docker/profile
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$sudo vi /var/lib/boot2docker/profile
+</code></pre></div><p>添加一下内容，如果不需要正通过#来注释掉</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">export HTTP_PROXY=10.125.156.21:8118
+export HTTPS_PROXY=10.125.156.21:8118
+</code></pre></div></li>
+<li>重启docker服务
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">$sudo /usr/local/etc/init.d/docker restart
+</code></pre></div></li>
+</ol>
+<h3 id="参考">参考</h3>
+<p><a href="http://lostjs.com/2014/02/26/docker-behind-gfw/">http://lostjs.com/2014/02/26/docker-behind-gfw/</a></p>
+
+	</div>
+	
+	
+<div class="post-nav">
+	
+	
+	<a class="pre" href="http://mikesu.net/30/">Boot2docker通过VirtualBox Guest Additions实现目录共享</a>
+	
+	
+	
+	
+	<a class="next" href="http://mikesu.net/32/">Boot2docker通过Samba实现文件夹共享</a>
+	
+	
+</div>
+
+	
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="http://mikesu.net">Mike SU</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="http://mikesu.net/31/">http://mikesu.net/31/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">署名 4.0 国际 (CC BY 4.0)</a>进行许可。</li>
+    </ul>
+</div>
+<br/>
+
+
+	
+
+	
+    
+
+    
+    
+</article>
+
+				</main>
+            </div>
+			<div class="pure-u-1-4 hidden_mid_and_down">
+			    <div id="sidebar">
+				    <section class="widget">
+<form class="search-form" action='http://mikesu.net/search/' method="get" accept-charset="utf-8" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+	  
+</form>
+</section>
+					
+					<section class="widget">
+<h3 class="widget-title"><i class="fa fa-file-o"> 最近文章</i></h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="http://mikesu.net/35/" title="搭建 JavaScript 开发环境">搭建 JavaScript 开发环境</a>
+    </li>
+    
+    <li>
+        <a href="http://mikesu.net/34/" title="Java RMI远程调用简单示例">Java RMI远程调用简单示例</a>
+    </li>
+    
+    <li>
+        <a href="http://mikesu.net/33/" title="通过WebRTC实现网页间文件传输">通过WebRTC实现网页间文件传输</a>
+    </li>
+    
+    <li>
+        <a href="http://mikesu.net/32/" title="Boot2docker通过Samba实现文件夹共享">Boot2docker通过Samba实现文件夹共享</a>
+    </li>
+    
+    <li>
+        <a href="http://mikesu.net/31/" title="docker 使用代理连接 Docker Hub">docker 使用代理连接 Docker Hub</a>
+    </li>
+    
+    <li>
+        <a href="http://mikesu.net/30/" title="Boot2docker通过VirtualBox Guest Additions实现目录共享">Boot2docker通过VirtualBox Guest Additions实现目录共享</a>
+    </li>
+    
+    <li>
+        <a href="http://mikesu.net/29/" title="绿色版Solr安装配置">绿色版Solr安装配置</a>
+    </li>
+    
+    <li>
+        <a href="http://mikesu.net/28/" title="我的博客之路">我的博客之路</a>
+    </li>
+    
+    <li>
+        <a href="http://mikesu.net/27/" title="Pelican支持Swiftype搜索">Pelican支持Swiftype搜索</a>
+    </li>
+    
+    <li>
+        <a href="http://mikesu.net/26/" title="启用免费版MarkdownPad2的Markdown扩展模式">启用免费版MarkdownPad2的Markdown扩展模式</a>
+    </li>
+    
+</ul>
+</section>
+					
+					
+				</div>
+			</div>
+			<div class="pure-u-1 pure-u-md-3-4">
+				<footer id="footer">
+					<div>
+	Copyright &copy; 2021 <a href="http://mikesu.net">Mike SU</a>
+	
+</div>
+<div>
+	Powered by<a href="https://gohugo.io/" target="_black" rel="nofollow"> Hugo</a>
+	Theme by<a href="https://github.com/tufu9441/maupassant-hexo" target="_black"> Maupassant</a>
+</div>
+<a id="rocket" href="#top"></a>
+					<script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/totop.js"></script>
+
+					
+	<script type="text/javascript" src="/js/toc.js"></script>
+
+				</footer>
+			</div>
+        </div>
+    </div>
+</body>
+</html>

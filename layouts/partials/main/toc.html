@@ -1,0 +1,9 @@
+{{ if or .Params.toc (and .Site.Params.toc (ne .Params.toc false)) -}}
+<aside class="toc-article">
+    <header class="toc-title"><a href="#top">目录</a></header>
+    {{.TableOfContents}}
+</aside>
+{{- end }}
+{{ define "extend-js" }}
+	<script type="text/javascript" src="{{ "js/toc.js" | relURL}}"></script>
+{{ end }}

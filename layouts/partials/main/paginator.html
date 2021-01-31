@@ -1,0 +1,71 @@
+{{ with .Paginator }}
+
+
+{{ if gt .TotalPages 10 }}
+<nav class="page-navigator">
+    {{ if .HasPrev }}
+    <a class="extend prev" rel="prev" href="{{ .Prev.URL | absLangURL }}">上一页</a>
+    {{ end }}
+
+    {{ $dynamicPages := slice 1 }}
+
+    {{ if eq .PageNumber 1 }}
+        {{ $dynamicPages = $dynamicPages|append 2 3 -1 }}
+    {{ else if eq .PageNumber 2 }}
+        {{ $dynamicPages = $dynamicPages|append 2 3 4 -1 }}
+    {{ else if eq .PageNumber 3 }}
+        {{ $dynamicPages = $dynamicPages|append 2 3 4 5 -1 }}
+    {{ else if eq .PageNumber (sub .TotalPages 2) }}
+        {{ $dynamicPages = $dynamicPages|append -1 }}
+        {{ $dynamicPages = $dynamicPages|append (sub .PageNumber 2) (sub .PageNumber 1) .PageNumber (add .PageNumber 1) }}
+    {{ else if eq .PageNumber (sub .TotalPages 1) }}
+        {{ $dynamicPages = $dynamicPages|append -1 }}
+        {{ $dynamicPages = $dynamicPages|append (sub .PageNumber 2) (sub .PageNumber 1) .PageNumber }}
+    {{ else if eq .PageNumber .TotalPages }}
+        {{ $dynamicPages = $dynamicPages|append -1 }}
+        {{ $dynamicPages = $dynamicPages|append (sub .PageNumber 2) (sub .PageNumber 1) }}
+    {{ else }}
+        {{ $dynamicPages = $dynamicPages|append -1 }}
+        {{ $dynamicPages = $dynamicPages|append (sub .PageNumber 2) (sub .PageNumber 1) .PageNumber (add .PageNumber 1) (add .PageNumber 2) -1}}
+    {{ end }}
+    {{ $dynamicPages = $dynamicPages|append .TotalPages }}
+
+    {{ range $dynamicPages }}
+        {{ if eq -1 .}}
+        <span>...</span>
+        {{ else }}
+        {{ $pager:=index $.Paginator.Pagers (sub . 1) }}
+		    {{ if eq . $.Paginator.PageNumber }}
+			    <span class="page-number current">{{ $pager.PageNumber }}</span>
+			{{ else }}
+			    <a class="page-number" href="{{ $pager.URL | absLangURL }}">{{ $pager.PageNumber }}</a>
+			{{ end }}
+        {{ end }}
+    {{ end }}
+
+    {{ if .HasNext }}
+    <a class="extend next" rel="next" href="{{ .Next.URL | absLangURL }}">下一页</a>
+    {{ end }}
+</nav>
+
+{{ else if gt .TotalPages 1 }}
+<nav class="page-navigator">
+    {{ if .HasPrev }}
+		<a class="extend prev" rel="prev" href="{{ .Prev.URL | absLangURL }}">上一页</a>
+    {{ end }}
+
+    {{ range .Pagers }}
+		{{ if eq .PageNumber $.Paginator.PageNumber }}
+			<span class="page-number current">{{ .PageNumber }}</span>
+		{{ else }}
+			<a class="page-number" href="{{ .URL | absLangURL }}">{{ .PageNumber }}</a>
+		{{ end }}
+    {{ end }}
+
+    {{ if .HasNext }}
+		<a class="extend next" rel="next" href="{{ .Next.URL | absLangURL }}">下一页</a>
+    {{ end }}
+</nav>
+{{ end }}
+
+{{ end }}

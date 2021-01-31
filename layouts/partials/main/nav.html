@@ -1,0 +1,14 @@
+{{if eq .Type "posts"}}
+<div class="post-nav">
+	{{if .Prev}}
+	{{if eq .Prev.Type "posts"}}
+	<a class="pre" href="{{.Prev.Permalink}}">{{.Prev.Title}}</a>
+	{{end}}
+	{{end}}
+	{{if .Next}}
+	{{if eq .Next.Type "posts"}}
+	<a class="next" href="{{.Next.Permalink}}">{{.Next.Title}}</a>
+	{{end}}
+	{{end}}
+</div>
+{{end}}

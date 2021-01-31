@@ -1,0 +1,6 @@
+{{ with .Params.Categories }}
+	<span>|</span>
+	{{ range . }}
+	<span class="category"><a href='{{ "categories/" | relURL }}{{ . | urlize }}'>{{ . }}</a></span>
+	{{ end }}
+{{ end }}

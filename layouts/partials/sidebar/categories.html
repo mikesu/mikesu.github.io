@@ -1,0 +1,10 @@
+{{ with .Site.Taxonomies.categories }}
+<section class="widget">
+<h3 class="widget-title"><i class="fa fa-folder-o"> 分类</i></h3>
+<ul class="widget-list">
+    {{ range . }}
+    <li><a href="{{ .Page.Permalink }}">{{ .Page.Title }} ({{ .Count }})</a></li>
+    {{ end }}
+</ul>
+</section>
+{{ end }}

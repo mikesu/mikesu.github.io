@@ -1,0 +1,44 @@
+baseURL = "http://mikesu.net"
+languageCode = "zh-CN"
+title = "Mike SU"
+hasCJKLanguage = true
+
+[author]
+  name = "Mike SU"
+
+[params]
+  author = "Mike SU"
+  subtitle = "Note & Blog"
+  localSearch = true # 启用本地搜索
+
+[permalinks]
+  posts = "/:slug/"
+  
+[markup]
+  [markup.highlight]
+    guessSyntax = true
+    style = "manni"
+    tabWidth = 4
+
+## 开启版权声明，协议名字和链接都可以换
+[params.cc]
+    name = "署名 4.0 国际 (CC BY 4.0)"
+    link = "https://creativecommons.org/licenses/by/4.0/"
+
+## 配置网站菜单
+
+[menu]
+
+  [[menu.main]]
+    identifier = "archives"
+    name = "归档"
+    pre = "<i class='fa fa-archive'></i>"
+    url = "/archives/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "about"
+    name = "关于"
+    pre = "<i class='fa fa-user'></i>"
+    url = "/about/"
+    weight = 3

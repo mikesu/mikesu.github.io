@@ -1,0 +1,5 @@
+{{ define "main"}}
+	{{ with (where .Site.RegularPages "Type" "posts")}}
+	{{ partial "main/archive" . }}
+	{{ end }}
+{{ end }}

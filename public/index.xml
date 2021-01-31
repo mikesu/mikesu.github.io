@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Mike SU</title>
+    <link>http://mikesu.net/</link>
+    <description>Recent content on Mike SU</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 13 Oct 2017 22:33:36 +0800</lastBuildDate><atom:link href="http://mikesu.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>搭建 JavaScript 开发环境</title>
+      <link>http://mikesu.net/35/</link>
+      <pubDate>Fri, 13 Oct 2017 22:33:36 +0800</pubDate>
+      
+      <guid>http://mikesu.net/35/</guid>
+      <description>安装Nodejs和npm nodejs是javascript的运行环境。 npm是javascript的包管理器。 安装nodejs就会同时安装n</description>
+    </item>
+    
+    <item>
+      <title>Java RMI远程调用简单示例</title>
+      <link>http://mikesu.net/34/</link>
+      <pubDate>Fri, 21 Nov 2014 18:26:33 +0800</pubDate>
+      
+      <guid>http://mikesu.net/34/</guid>
+      <description>一、RMI简介 RMI是Java的一组用于开发分布式应用程序的API。RMI使用Java语言接口定义了远程对象，它集合了Java序列化和Jav</description>
+    </item>
+    
+    <item>
+      <title>通过WebRTC实现网页间文件传输</title>
+      <link>http://mikesu.net/33/</link>
+      <pubDate>Wed, 05 Nov 2014 18:23:34 +0800</pubDate>
+      
+      <guid>http://mikesu.net/33/</guid>
+      <description>这里采用PeerJS作为Signaling服务器（mikesu.herokuapp.com)。 接收方使用方法 调用connectPeerSer</description>
+    </item>
+    
+    <item>
+      <title>Boot2docker通过Samba实现文件夹共享</title>
+      <link>http://mikesu.net/32/</link>
+      <pubDate>Fri, 31 Oct 2014 18:18:13 +0800</pubDate>
+      
+      <guid>http://mikesu.net/32/</guid>
+      <description>这是Boot2docker推荐的共享文件方法。 用busybox创建Data volume containers，就是专门存储数据的容器，给他取个名字叫my</description>
+    </item>
+    
+    <item>
+      <title>docker 使用代理连接 Docker Hub</title>
+      <link>http://mikesu.net/31/</link>
+      <pubDate>Thu, 30 Oct 2014 17:57:23 +0800</pubDate>
+      
+      <guid>http://mikesu.net/31/</guid>
+      <description>由于网络和墙的原因，直接连接Docker Hub是非常慢的，有时候还连接不上。所有我们经常需要通过代理来连接Docker Hub。下面用10.1</description>
+    </item>
+    
+    <item>
+      <title>Boot2docker通过VirtualBox Guest Additions实现目录共享</title>
+      <link>http://mikesu.net/30/</link>
+      <pubDate>Thu, 30 Oct 2014 17:56:07 +0800</pubDate>
+      
+      <guid>http://mikesu.net/30/</guid>
+      <description>由于boot2docker官方的iso是无法安装VirtualBox Guest Additions的。于是我找了一个集成了VirtualBox Guest Add</description>
+    </item>
+    
+    <item>
+      <title>绿色版Solr安装配置</title>
+      <link>http://mikesu.net/29/</link>
+      <pubDate>Thu, 30 Oct 2014 17:52:30 +0800</pubDate>
+      
+      <guid>http://mikesu.net/29/</guid>
+      <description>由于Solr可以用Tomcat运行的，而Tomcat是用JDK运行的，可以利用JDK免安装的特点实现Solr的免安装。就是通过配置整合JDK</description>
+    </item>
+    
+    <item>
+      <title>我的博客之路</title>
+      <link>http://mikesu.net/28/</link>
+      <pubDate>Wed, 29 Oct 2014 16:28:46 +0800</pubDate>
+      
+      <guid>http://mikesu.net/28/</guid>
+      <description>对于一般人来说，弄个博客是非常简单的事情，随便选择一个免费的博客网站提供的服务就可以了。但是对于我来说，事情就不是这么简单了，是一个很纠结的</description>
+    </item>
+    
+    <item>
+      <title>Pelican支持Swiftype搜索</title>
+      <link>http://mikesu.net/27/</link>
+      <pubDate>Tue, 28 Oct 2014 14:57:11 +0800</pubDate>
+      
+      <guid>http://mikesu.net/27/</guid>
+      <description>引言 一般的动态博客系统都提供了搜索功能，但是对于静态博客来说就必须借助外部系统来完成搜索的功能了。 Google和Baidu都提供了站内搜索的</description>
+    </item>
+    
+    <item>
+      <title>启用免费版MarkdownPad2的Markdown扩展模式</title>
+      <link>http://mikesu.net/26/</link>
+      <pubDate>Mon, 27 Oct 2014 14:54:05 +0800</pubDate>
+      
+      <guid>http://mikesu.net/26/</guid>
+      <description>寻找Markdown配置文件 一般在用户的数据目录，例如: C:\Users\xxx\AppData\Local\MarkdownPad2\MarkdownPad2.exe_Url_xxx\2.4.4.40074\user.config 启用Markdown扩展模式 添加或者修改一些数据 &amp;lt;setting name=&amp;#34;Markdown_Extra_ExtraMode&amp;#34; serializeAs=&amp;#34;String&amp;#34;&amp;gt; &amp;lt;value&amp;gt;True&amp;lt;/value&amp;gt; &amp;lt;/setting&amp;gt; &amp;lt;setting name=&amp;#34;Markdown_MarkdownProcessor&amp;#34; serializeAs=&amp;#34;String&amp;#34;&amp;gt; &amp;lt;value&amp;gt;MarkdownExtraMode&amp;lt;/value&amp;gt; &amp;lt;/setting&amp;gt; 验证Markd</description>
+    </item>
+    
+    <item>
+      <title>Pelican 更换主题</title>
+      <link>http://mikesu.net/25/</link>
+      <pubDate>Fri, 24 Oct 2014 14:42:38 +0800</pubDate>
+      
+      <guid>http://mikesu.net/25/</guid>
+      <description>pelican-themes 命令 pelican-themes是管理主题的命令工具，基本用法： 命令 描述 pelican-themes -h 显示帮助 pelican-themes -l 显示已经安装的主题 pelican-themes -i [theme_path] 安装主题 pelican-themes -r [theme_name] 删除主题 安装</description>
+    </item>
+    
+    <item>
+      <title>Pelican Quickstart</title>
+      <link>http://mikesu.net/24/</link>
+      <pubDate>Fri, 24 Oct 2014 14:35:38 +0800</pubDate>
+      
+      <guid>http://mikesu.net/24/</guid>
+      <description>安装Pelican pip install pelican markdown 创建项目 mkdir -p ~/projects/yoursite cd ~/projects/yoursite pelican-quickstart 发表文章 Title: Pelican Quickstart Date: 2014-10-24 10:11 Category:博客系统 Tags: python,pelican,markdown 这面是文章的正文 保存到~/projects/</description>
+    </item>
+    
+    <item>
+      <title>Windows 7 安装64位 Python 2.7.3 开发环境</title>
+      <link>http://mikesu.net/23/</link>
+      <pubDate>Mon, 04 Mar 2013 23:58:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/23/</guid>
+      <description>安装Python 2.7.3 下载http://python.org/ftp/python/2.7.3/python-2.7.3.amd64.msi 安装</description>
+    </item>
+    
+    <item>
+      <title>HelloWorld 第一个Tornado应用</title>
+      <link>http://mikesu.net/22/</link>
+      <pubDate>Mon, 04 Mar 2013 23:54:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/22/</guid>
+      <description>建立工作目录 D:\python\workspace\tornado 使用Virtualenv建立虚拟环境并激活环境 初始化环境，进入命令行，执行 D:\Python\workspace\tornado&amp;gt;virtualenv env 激活环境，执行 D:\Python\workspace\tornado&amp;gt;env\Scripts\activate 安装Tornado 使用pip进行</description>
+    </item>
+    
+    <item>
+      <title>好久没有听歌了</title>
+      <link>http://mikesu.net/21/</link>
+      <pubDate>Sat, 26 Jul 2008 21:36:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/21/</guid>
+      <description>都不记得什么时候开始没有听歌了，也许是阿菲退役，也许是后街男孩不再流行了，也许是工作太忙了。今天为了转换两首MP3，于是下载了千千静听。他有</description>
+    </item>
+    
+    <item>
+      <title>Apache Tomcat 负载均衡配置</title>
+      <link>http://mikesu.net/20/</link>
+      <pubDate>Fri, 18 Jan 2008 23:16:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/20/</guid>
+      <description>同一台服务器上运行Apache和两个tomcat来做负载均衡，不做集群。所以不需要session复制，但是需要session的粘住。 系统是用</description>
+    </item>
+    
+    <item>
+      <title>Install OpenVZ On Debian Etch</title>
+      <link>http://mikesu.net/19/</link>
+      <pubDate>Sun, 11 Nov 2007 14:02:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/19/</guid>
+      <description>昨天经同事介绍有个比较好的虚拟机。OpenVZ，昨夜试了一下，成功了，故和大家分享。 主要参考OpenVZ的官方文档做的。http://wik</description>
+    </item>
+    
+    <item>
+      <title>FactoryBean</title>
+      <link>http://mikesu.net/18/</link>
+      <pubDate>Thu, 13 Sep 2007 22:34:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/18/</guid>
+      <description>其实实现了FactoryBean接口的Bean，就是一个Bean Factory。例如下面，对这个userCacheBackend的引用，并不</description>
+    </item>
+    
+    <item>
+      <title>重拾VC6</title>
+      <link>http://mikesu.net/17/</link>
+      <pubDate>Tue, 28 Aug 2007 11:53:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/17/</guid>
+      <description>昨完因工作需要写一个生成N到M的不重复随机数列的小程序。所以又把多年前用过的VC6拿出来用了，还好现在网络信息非常发达，否则我还要去翻书呢。</description>
+    </item>
+    
+    <item>
+      <title>申请域名成功！Phasotron.com</title>
+      <link>http://mikesu.net/16/</link>
+      <pubDate>Sat, 25 Aug 2007 09:17:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/16/</guid>
+      <description>经过了多次酝酿，几经考虑，最后决定采用Phasotron作为域名，这个单词的意思是“同相加速器”，来源与我核物理专业的背景，也希望和大家一起</description>
+    </item>
+    
+    <item>
+      <title>DBDesigner 4 与 MySql 5 的连接</title>
+      <link>http://mikesu.net/15/</link>
+      <pubDate>Fri, 09 Mar 2007 10:35:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/15/</guid>
+      <description>DBDesigner 4 与 MySql 5 不能连接主要是驱动的原因， 到http://crlab.com/dbx/download.html 下载最新的驱动并安装，在安装路径中</description>
+    </item>
+    
+    <item>
+      <title>注意言语</title>
+      <link>http://mikesu.net/14/</link>
+      <pubDate>Mon, 12 Feb 2007 17:11:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/14/</guid>
+      <description>今天看到一个故事，其实以前是看过的，但是今天看来特别感悟，于是记录下来，以后好好提醒自己。但是也要注意不能以这个成为我不爱说话的理由，还有好</description>
+    </item>
+    
+    <item>
+      <title>安装Debian 3.1r3 基本系统</title>
+      <link>http://mikesu.net/13/</link>
+      <pubDate>Tue, 06 Feb 2007 09:44:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/13/</guid>
+      <description>用debian-31r3-i386-netinst.iso来安装。 选择简体中文，所在地区是中国，键盘时美国英语。 输入主机名debian26，</description>
+    </item>
+    
+    <item>
+      <title>对多级类别中按类别搜索的方法</title>
+      <link>http://mikesu.net/12/</link>
+      <pubDate>Fri, 02 Feb 2007 09:38:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/12/</guid>
+      <description>一般的实现多级类别是用树来实现的，而树一般有两种实现的方法，一种是每个节点记录他的父节点，另一种是利用编号来实现。 编号的实现：例如根节点的子</description>
+    </item>
+    
+    <item>
+      <title>用ajax实现负责均衡的想法</title>
+      <link>http://mikesu.net/11/</link>
+      <pubDate>Thu, 01 Feb 2007 10:57:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/11/</guid>
+      <description>既然ajax可是实现浏览器和服务器之间的异步处理，于是我就产生了用ajax实现负责均衡的想法，关于基本的思路和具体的实现还在考虑中。现在只是</description>
+    </item>
+    
+    <item>
+      <title>关注JSON</title>
+      <link>http://mikesu.net/10/</link>
+      <pubDate>Thu, 01 Feb 2007 10:54:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/10/</guid>
+      <description>http://www.json.org/</description>
+    </item>
+    
+    <item>
+      <title>中文分词的一些文章</title>
+      <link>http://mikesu.net/9/</link>
+      <pubDate>Wed, 31 Jan 2007 15:14:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/9/</guid>
+      <description>这都是我的分词器的算法基础。分词器正在开发中，由于工作的原因进度比较慢。 《基于N-最短路径方法的中文词语粗分模型》作者：张华平，刘群 《一个求</description>
+    </item>
+    
+    <item>
+      <title>eclipseUML 下载地址</title>
+      <link>http://mikesu.net/8/</link>
+      <pubDate>Wed, 31 Jan 2007 14:11:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/8/</guid>
+      <description>http://www.eclipsedownload.com/eclipseUML_E320_studioEdition_2.1.0.20061221.zip 使用免费版就可以满足大部分人的需要了，所以推荐用免费版。 破解请看： http://matrix.org.cn/thread.shtml?topicId=26263&amp;amp;forumId=25 我在这里转贴一下那个协议文件和使用方法 转用法: 将eval.licens</description>
+    </item>
+    
+    <item>
+      <title>我的最简Eclipse</title>
+      <link>http://mikesu.net/7/</link>
+      <pubDate>Wed, 31 Jan 2007 13:52:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/7/</guid>
+      <description>平常我们都是直接下载eclipse的SDK来用的，但是在实际应用中主要还是写自己的程序，也不会用到eclipse的源代码的。所以只要下载Ru</description>
+    </item>
+    
+    <item>
+      <title>eXtremeTable 的ec:tree的简单使用</title>
+      <link>http://mikesu.net/6/</link>
+      <pubDate>Wed, 31 Jan 2007 10:50:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/6/</guid>
+      <description>&amp;lt;ec:tree identifier=&amp;#34;id&amp;#34; parentAttribute=&amp;#34;parentId&amp;#34; items=&amp;#34;dirList&amp;#34; action=&amp;#34;Dir/search.do&amp;#34; view=&amp;#34;org.extremecomponents.tree.TreeView&amp;#34; filterable=&amp;#34;false&amp;#34; sortable=&amp;#34;false&amp;#34; var=&amp;#34;dir&amp;#34;&amp;gt; &amp;lt;ec:row&amp;gt; &amp;lt;ec:column property=&amp;#34;name&amp;#34; title=&amp;#34;名称&amp;#34; cell=&amp;#34;org.extremecomponents.tree.TreeCell&amp;#34;/&amp;gt; &amp;lt;ec:column property=&amp;#34;descripsion&amp;#34; title=&amp;#34;描述&amp;#34;/&amp;gt; &amp;lt;/ec:row&amp;gt; &amp;lt;/ec:tree&amp;gt; 主要是红色部分和ec:t</description>
+    </item>
+    
+    <item>
+      <title>MyEclipse 下载地址</title>
+      <link>http://mikesu.net/5/</link>
+      <pubDate>Tue, 30 Jan 2007 17:08:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/5/</guid>
+      <description>http://downloads.myeclipseide.com/downloads/products/eworkbench/5.1.0GA/FullStack_MyEclipseEnterpriseWorkbenchInstaller_5.1.0GA_E3.2.1.exe License Name : TLF License Key : GLR8ZC|065444|545454|7663624914 License Name : EastGame License Key : RLR8ZC|065444|545454|352499020 License Name : eastgame.net License Key : rLR8ZC|065444|545454|340248553 Subscriber: www.1cn.biz Subscriber Code: jLR8ZC-444-55-4467865481680090 注册成功后会发现： Subscriber: www.1cn.biz Product ID: E3MP (MyEclipse Professional Subscription) License version: 9.99 Full Maintenance Included Subscription expiration date (YYYYMMDD): 20991231 Number of licenses: Unlimited 以上破解来自互联</description>
+    </item>
+    
+    <item>
+      <title>HQL 的多对多查询的一点小经验</title>
+      <link>http://mikesu.net/4/</link>
+      <pubDate>Tue, 30 Jan 2007 15:29:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/4/</guid>
+      <description>现在有学生和教师两个类，之间有多对多关系，通过对象关联很容易就可以得到一个学生对应的老师，那如何通过HQL来实现相同的功能或者更复杂的查询呢</description>
+    </item>
+    
+    <item>
+      <title>我的Thinking in Java 3rd 的学习笔记</title>
+      <link>http://mikesu.net/3/</link>
+      <pubDate>Thu, 05 Jan 2006 17:08:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/3/</guid>
+      <description>很久以前就申请了这个blog但是一直我都很懒，没有写过东西，今天终于鼓起勇气，写了一篇。希望在以后的日子写下我得学习笔记，我的心情。 重装了电</description>
+    </item>
+    
+    <item>
+      <title>FeedDemon 1.x 版本的通用破解</title>
+      <link>http://mikesu.net/2/</link>
+      <pubDate>Sun, 24 Oct 2004 22:04:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/2/</guid>
+      <description>小弟今天才知道什么是RSS，于是在网上找阅读器，找到一个“看天下”，经过试用，感觉一般。没有独立的代理设置，不支持RSS连接的拖拉到频道栏等</description>
+    </item>
+    
+    <item>
+      <title>Hello World</title>
+      <link>http://mikesu.net/1/</link>
+      <pubDate>Tue, 11 Jun 2002 15:30:00 +0800</pubDate>
+      
+      <guid>http://mikesu.net/1/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>http://mikesu.net/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://mikesu.net/about/</guid>
+      <description>Me 一位丈夫，一个爸爸，a Programmer，a Travelle。 Contact Email: mikesu@foxmail.com Links Github: https://github.com/mikesu 微博： http://weibo.com/mikesu</description>
+    </item>
+    
+    <item>
+      <title>归档</title>
+      <link>http://mikesu.net/archives/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://mikesu.net/archives/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>搜索</title>
+      <link>http://mikesu.net/search/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>http://mikesu.net/search/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

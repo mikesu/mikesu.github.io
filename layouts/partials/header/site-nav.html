@@ -1,0 +1,10 @@
+<nav id="nav-menu">
+	<a class="{{ if or (.IsHome) (eq .Type "post") }}current{{ end }}" href="{{ .Site.BaseURL | absURL }}">
+		<i class="fa fa-home"> 首页</i>
+	</a>
+	{{ range .Site.Menus.main }}
+	<a {{ if eq .URL $.RelPermalink }}class="current"{{ end }} href="{{ .URL | absURL }}" title="{{ .Name }}">
+		{{ .Pre }} {{ .Name }}
+	</a>
+	{{ end }}
+</nav>
