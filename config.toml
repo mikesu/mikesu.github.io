@@ -1,7 +1,8 @@
-baseURL = "http://mikesu.net"
+baseURL = "https://mikesu.net"
 languageCode = "zh-CN"
 title = "Mike SU"
 hasCJKLanguage = true
+publishdir  = "docs"
 
 [author]
   name = "Mike SU"

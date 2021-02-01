@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+	<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apache Tomcat 负载均衡配置 | Mike SU</title>
+<meta property="og:title" content="Apache Tomcat 负载均衡配置 - Mike SU">
+<meta property="og:type" content="article">
+	
+<meta property="article:published_time" content='2008-01-18T23:16:00&#43;08:00'>
+	
+	
+<meta property="article:modified_time" content='2008-01-18T23:16:00&#43;08:00'>
+	
+<meta name="Keywords" content="">
+<meta name="description" content="Apache Tomcat 负载均衡配置">
+	
+<meta name="author" content="Mike SU">
+<meta property="og:url" content="https://mikesu.net/20/">
+	
+	<link rel="shortcut icon" href='/favicon.ico'  type="image/x-icon">
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/normalize.css/normalize.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/purecss/build/pure-min.min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/purecss/build/grids-responsive-min.css">
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+
+<link rel="stylesheet" href="https://mikesu.net/css/style.min.css">
+	
+</head>
+<body>
+    <div class="body_container">
+		<header id="header">
+			<div class="site-name ">
+	
+	<a id="logo" href="https://mikesu.net">Mike SU</a>
+	<p class="description">Note &amp; Blog</p>
+</div>
+		    <nav id="nav-menu">
+	<a class="" href="https://mikesu.net">
+		<i class="fa fa-home"> 首页</i>
+	</a>
+	
+	<a  href="https://mikesu.net/archives/" title="归档">
+		<i class='fa fa-archive'></i> 归档
+	</a>
+	
+	<a  href="https://mikesu.net/about/" title="关于">
+		<i class='fa fa-user'></i> 关于
+	</a>
+	
+</nav>
+		</header>
+        <div id="layout" class="pure-g">
+            <div class="pure-u-1 pure-u-md-3-4">
+				<main class="content_container">
+					
+<article class="post">
+	
+
+	<h1 class="post-title">Apache Tomcat 负载均衡配置</h1>
+	<div class="post-meta">
+	2008年1月18日
+	
+	</div>
+	<div class="post-content">
+		<p>  同一台服务器上运行Apache和两个tomcat来做负载均衡，不做集群。所以不需要session复制，但是需要session的粘住。<br>
+  系统是用Debian。所以配置文件的位置可能和其它Linux发行版有所不同。还有就是已经配置好了Apache Tomcat的整合的基础上做的修改<br>
+修改 /etc/apache2/mods-available/jk.conf</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback"># 将所有servlet 和jsp请求通过ajp13的协议送给Tomcat，让Tomcat来处理
+JkMount /*.do  router
+JkMount /*.jsp router
+</code></pre></div><p>  这里的router其实是负载均衡的worker，不是实际的worker。在下面配置workers.properties可以可以清楚看到。</p>
+<div class="highlight"><pre style="background-color:#f0f3f3;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-fallback" data-lang="fallback">worker.list=router
+worker.worker1.type=ajp13
+worker.worker1.host=localhost
+worker.worker1.port=8009
+worker.worker1.lbfactor=1
+
+worker.worker2.type=ajp13
+worker.worker2.host=localhost
+worker.worker2.port=8010
+worker.worker2.lbfactor=1
+
+worker.router.type=lb
+worker.router.balance_workers=worker1,worker2
+</code></pre></div><p>  根据tomcat的官方文档默认是打开Session粘住的，另外worker.list只需router其他的worker不需要列出。并且在balance_workers属性中的worker必须不能在worker.list中出现。所以这里只列出了router，如果其他的worker也列出，我没有试过，不知能否成功。
+配置 tomcat的server.xml 作用主要是为apache提供Session粘住。<br>
+把<code>&lt;Engine name=&quot;Catalina&quot; defaultHost=&quot;localhost&quot;&gt;</code><br>
+改为<code>&lt;Engine name=&quot;Standalone&quot; defaultHost=&quot;localhost&quot; jvmRoute=&quot;worker1&quot;&gt;</code><br>
+  把另外一个tomcat的server.xml也按上面的方法修改，但是jvmRoute=&ldquo;worker2&rdquo; 。这里的jvmRoute就是对应workers.properties配置文件中的两个worker。名字必须对应。只是Session粘住的关键。</p>
+<p>全部配置完成。重启所以tomcat和Apache。</p>
+
+	</div>
+	
+	
+<div class="post-nav">
+	
+	
+	<a class="pre" href="https://mikesu.net/19/">Install OpenVZ On Debian Etch</a>
+	
+	
+	
+	
+	<a class="next" href="https://mikesu.net/21/">好久没有听歌了</a>
+	
+	
+</div>
+
+	
+<div class="post-archive">
+    <ul class="post-copyright">
+        <li><strong>原文作者：</strong><a rel="author" href="https://mikesu.net">Mike SU</a></li>
+        <li style="word-break:break-all"><strong>原文链接：</strong><a href="https://mikesu.net/20/">https://mikesu.net/20/</a></li>
+        <li><strong>版权声明：</strong>本作品采用<a rel="license" href="https://creativecommons.org/licenses/by/4.0/">署名 4.0 国际 (CC BY 4.0)</a>进行许可。</li>
+    </ul>
+</div>
+<br/>
+
+
+	
+
+	
+    
+
+    
+    
+</article>
+
+				</main>
+            </div>
+			<div class="pure-u-1-4 hidden_mid_and_down">
+			    <div id="sidebar">
+				    <section class="widget">
+<form class="search-form" action='https://mikesu.net/search/' method="get" accept-charset="utf-8" _lpchecked="1">
+      
+      <input type="text" name="q" maxlength="20" placeholder="Search">
+	  
+</form>
+</section>
+					
+					<section class="widget">
+<h3 class="widget-title"><i class="fa fa-file-o"> 最近文章</i></h3>
+<ul class="widget-list">
+    
+    <li>
+        <a href="https://mikesu.net/35/" title="搭建 JavaScript 开发环境">搭建 JavaScript 开发环境</a>
+    </li>
+    
+    <li>
+        <a href="https://mikesu.net/34/" title="Java RMI远程调用简单示例">Java RMI远程调用简单示例</a>
+    </li>
+    
+    <li>
+        <a href="https://mikesu.net/33/" title="通过WebRTC实现网页间文件传输">通过WebRTC实现网页间文件传输</a>
+    </li>
+    
+    <li>
+        <a href="https://mikesu.net/32/" title="Boot2docker通过Samba实现文件夹共享">Boot2docker通过Samba实现文件夹共享</a>
+    </li>
+    
+    <li>
+        <a href="https://mikesu.net/31/" title="docker 使用代理连接 Docker Hub">docker 使用代理连接 Docker Hub</a>
+    </li>
+    
+    <li>
+        <a href="https://mikesu.net/30/" title="Boot2docker通过VirtualBox Guest Additions实现目录共享">Boot2docker通过VirtualBox Guest Additions实现目录共享</a>
+    </li>
+    
+    <li>
+        <a href="https://mikesu.net/29/" title="绿色版Solr安装配置">绿色版Solr安装配置</a>
+    </li>
+    
+    <li>
+        <a href="https://mikesu.net/28/" title="我的博客之路">我的博客之路</a>
+    </li>
+    
+    <li>
+        <a href="https://mikesu.net/27/" title="Pelican支持Swiftype搜索">Pelican支持Swiftype搜索</a>
+    </li>
+    
+    <li>
+        <a href="https://mikesu.net/26/" title="启用免费版MarkdownPad2的Markdown扩展模式">启用免费版MarkdownPad2的Markdown扩展模式</a>
+    </li>
+    
+</ul>
+</section>
+					
+					
+				</div>
+			</div>
+			<div class="pure-u-1 pure-u-md-3-4">
+				<footer id="footer">
+					<div>
+	Copyright &copy; 2021 <a href="https://mikesu.net">Mike SU</a>
+	
+</div>
+<div>
+	Powered by<a href="https://gohugo.io/" target="_black" rel="nofollow"> Hugo</a>
+	Theme by<a href="https://github.com/tufu9441/maupassant-hexo" target="_black"> Maupassant</a>
+</div>
+<a id="rocket" href="#top"></a>
+					<script type="text/javascript" src="//cdn.bootcdn.net/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script type="text/javascript" src="/js/totop.js"></script>
+
+					
+	<script type="text/javascript" src="/js/toc.js"></script>
+
+				</footer>
+			</div>
+        </div>
+    </div>
+</body>
+</html>
