@@ -1,5 +1,5 @@
 <section class="widget">
-<form class="search-form" action='{{if .Site.Params.localSearch }}{{ "search/"| absURL}}{{else}}//www.google.com/search{{end}}' method="get" accept-charset="utf-8" _lpchecked="1">
+<form class="search-form" action='{{if .Site.Params.localSearch }}{{ "search/"| relURL}}{{else}}//www.google.com/search{{end}}' method="get" accept-charset="utf-8" _lpchecked="1">
       {{/** the keywords **/}}
       <input type="text" name="q" maxlength="20" placeholder="Search">
 	  {{if ne .Site.Params.localSearch true}}
