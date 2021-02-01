@@ -3,7 +3,7 @@
 <h3 class="widget-title"><i class="fa fa-star-o"> 标签</i></h3>
 <div class="tagcloud">
     {{ range . }}
-    <a href="{{ .Page.Permalink }}">{{ .Page.Title }}</a>
+    <a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a>
     {{ end }}
 </div>
 </section>

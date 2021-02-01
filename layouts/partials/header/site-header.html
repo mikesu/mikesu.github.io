@@ -2,6 +2,6 @@
 	{{ if .IsHome }}
 		<h1 class="hidden">{{ .Site.Title }}</h1>
 	{{ end }}
-	<a id="logo" href="{{ .Site.BaseURL | absURL }}">{{ .Site.Title }}</a>
+	<a id="logo" href="{{ .Site.BaseURL | relURL }}">{{ .Site.Title }}</a>
 	{{ with .Site.Params.subtitle }}<p class="description">{{ . }}</p>{{ end }}
 </div>
