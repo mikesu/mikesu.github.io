@@ -10,6 +10,7 @@
     <item>
       <title>搭建 JavaScript 开发环境</title>
       <link>https://mikesu.net/35/</link>
+	  <relLink>/35/</relLink>
       <pubDate>Fri, 13 Oct 2017 22:33:36 +0800</pubDate>
       
       <guid>https://mikesu.net/35/</guid>
@@ -19,6 +20,7 @@
     <item>
       <title>Java RMI远程调用简单示例</title>
       <link>https://mikesu.net/34/</link>
+	  <relLink>/34/</relLink>
       <pubDate>Fri, 21 Nov 2014 18:26:33 +0800</pubDate>
       
       <guid>https://mikesu.net/34/</guid>
@@ -28,6 +30,7 @@
     <item>
       <title>通过WebRTC实现网页间文件传输</title>
       <link>https://mikesu.net/33/</link>
+	  <relLink>/33/</relLink>
       <pubDate>Wed, 05 Nov 2014 18:23:34 +0800</pubDate>
       
       <guid>https://mikesu.net/33/</guid>
@@ -37,6 +40,7 @@
     <item>
       <title>Boot2docker通过Samba实现文件夹共享</title>
       <link>https://mikesu.net/32/</link>
+	  <relLink>/32/</relLink>
       <pubDate>Fri, 31 Oct 2014 18:18:13 +0800</pubDate>
       
       <guid>https://mikesu.net/32/</guid>
@@ -46,6 +50,7 @@
     <item>
       <title>docker 使用代理连接 Docker Hub</title>
       <link>https://mikesu.net/31/</link>
+	  <relLink>/31/</relLink>
       <pubDate>Thu, 30 Oct 2014 17:57:23 +0800</pubDate>
       
       <guid>https://mikesu.net/31/</guid>
@@ -55,6 +60,7 @@
     <item>
       <title>Boot2docker通过VirtualBox Guest Additions实现目录共享</title>
       <link>https://mikesu.net/30/</link>
+	  <relLink>/30/</relLink>
       <pubDate>Thu, 30 Oct 2014 17:56:07 +0800</pubDate>
       
       <guid>https://mikesu.net/30/</guid>
@@ -64,6 +70,7 @@
     <item>
       <title>绿色版Solr安装配置</title>
       <link>https://mikesu.net/29/</link>
+	  <relLink>/29/</relLink>
       <pubDate>Thu, 30 Oct 2014 17:52:30 +0800</pubDate>
       
       <guid>https://mikesu.net/29/</guid>
@@ -73,6 +80,7 @@
     <item>
       <title>我的博客之路</title>
       <link>https://mikesu.net/28/</link>
+	  <relLink>/28/</relLink>
       <pubDate>Wed, 29 Oct 2014 16:28:46 +0800</pubDate>
       
       <guid>https://mikesu.net/28/</guid>
@@ -82,6 +90,7 @@
     <item>
       <title>Pelican支持Swiftype搜索</title>
       <link>https://mikesu.net/27/</link>
+	  <relLink>/27/</relLink>
       <pubDate>Tue, 28 Oct 2014 14:57:11 +0800</pubDate>
       
       <guid>https://mikesu.net/27/</guid>
@@ -91,6 +100,7 @@
     <item>
       <title>启用免费版MarkdownPad2的Markdown扩展模式</title>
       <link>https://mikesu.net/26/</link>
+	  <relLink>/26/</relLink>
       <pubDate>Mon, 27 Oct 2014 14:54:05 +0800</pubDate>
       
       <guid>https://mikesu.net/26/</guid>
@@ -100,6 +110,7 @@
     <item>
       <title>Pelican 更换主题</title>
       <link>https://mikesu.net/25/</link>
+	  <relLink>/25/</relLink>
       <pubDate>Fri, 24 Oct 2014 14:42:38 +0800</pubDate>
       
       <guid>https://mikesu.net/25/</guid>
@@ -109,6 +120,7 @@
     <item>
       <title>Pelican Quickstart</title>
       <link>https://mikesu.net/24/</link>
+	  <relLink>/24/</relLink>
       <pubDate>Fri, 24 Oct 2014 14:35:38 +0800</pubDate>
       
       <guid>https://mikesu.net/24/</guid>
@@ -118,6 +130,7 @@
     <item>
       <title>Windows 7 安装64位 Python 2.7.3 开发环境</title>
       <link>https://mikesu.net/23/</link>
+	  <relLink>/23/</relLink>
       <pubDate>Mon, 04 Mar 2013 23:58:00 +0800</pubDate>
       
       <guid>https://mikesu.net/23/</guid>
@@ -127,6 +140,7 @@
     <item>
       <title>HelloWorld 第一个Tornado应用</title>
       <link>https://mikesu.net/22/</link>
+	  <relLink>/22/</relLink>
       <pubDate>Mon, 04 Mar 2013 23:54:00 +0800</pubDate>
       
       <guid>https://mikesu.net/22/</guid>
@@ -136,6 +150,7 @@
     <item>
       <title>好久没有听歌了</title>
       <link>https://mikesu.net/21/</link>
+	  <relLink>/21/</relLink>
       <pubDate>Sat, 26 Jul 2008 21:36:00 +0800</pubDate>
       
       <guid>https://mikesu.net/21/</guid>
@@ -145,6 +160,7 @@
     <item>
       <title>Apache Tomcat 负载均衡配置</title>
       <link>https://mikesu.net/20/</link>
+	  <relLink>/20/</relLink>
       <pubDate>Fri, 18 Jan 2008 23:16:00 +0800</pubDate>
       
       <guid>https://mikesu.net/20/</guid>
@@ -154,6 +170,7 @@
     <item>
       <title>Install OpenVZ On Debian Etch</title>
       <link>https://mikesu.net/19/</link>
+	  <relLink>/19/</relLink>
       <pubDate>Sun, 11 Nov 2007 14:02:00 +0800</pubDate>
       
       <guid>https://mikesu.net/19/</guid>
@@ -163,6 +180,7 @@
     <item>
       <title>FactoryBean</title>
       <link>https://mikesu.net/18/</link>
+	  <relLink>/18/</relLink>
       <pubDate>Thu, 13 Sep 2007 22:34:00 +0800</pubDate>
       
       <guid>https://mikesu.net/18/</guid>
@@ -172,6 +190,7 @@
     <item>
       <title>重拾VC6</title>
       <link>https://mikesu.net/17/</link>
+	  <relLink>/17/</relLink>
       <pubDate>Tue, 28 Aug 2007 11:53:00 +0800</pubDate>
       
       <guid>https://mikesu.net/17/</guid>
@@ -181,6 +200,7 @@
     <item>
       <title>申请域名成功！Phasotron.com</title>
       <link>https://mikesu.net/16/</link>
+	  <relLink>/16/</relLink>
       <pubDate>Sat, 25 Aug 2007 09:17:00 +0800</pubDate>
       
       <guid>https://mikesu.net/16/</guid>
@@ -190,6 +210,7 @@
     <item>
       <title>DBDesigner 4 与 MySql 5 的连接</title>
       <link>https://mikesu.net/15/</link>
+	  <relLink>/15/</relLink>
       <pubDate>Fri, 09 Mar 2007 10:35:00 +0800</pubDate>
       
       <guid>https://mikesu.net/15/</guid>
@@ -199,6 +220,7 @@
     <item>
       <title>注意言语</title>
       <link>https://mikesu.net/14/</link>
+	  <relLink>/14/</relLink>
       <pubDate>Mon, 12 Feb 2007 17:11:00 +0800</pubDate>
       
       <guid>https://mikesu.net/14/</guid>
@@ -208,6 +230,7 @@
     <item>
       <title>安装Debian 3.1r3 基本系统</title>
       <link>https://mikesu.net/13/</link>
+	  <relLink>/13/</relLink>
       <pubDate>Tue, 06 Feb 2007 09:44:00 +0800</pubDate>
       
       <guid>https://mikesu.net/13/</guid>
@@ -217,6 +240,7 @@
     <item>
       <title>对多级类别中按类别搜索的方法</title>
       <link>https://mikesu.net/12/</link>
+	  <relLink>/12/</relLink>
       <pubDate>Fri, 02 Feb 2007 09:38:00 +0800</pubDate>
       
       <guid>https://mikesu.net/12/</guid>
@@ -226,6 +250,7 @@
     <item>
       <title>用ajax实现负责均衡的想法</title>
       <link>https://mikesu.net/11/</link>
+	  <relLink>/11/</relLink>
       <pubDate>Thu, 01 Feb 2007 10:57:00 +0800</pubDate>
       
       <guid>https://mikesu.net/11/</guid>
@@ -235,6 +260,7 @@
     <item>
       <title>关注JSON</title>
       <link>https://mikesu.net/10/</link>
+	  <relLink>/10/</relLink>
       <pubDate>Thu, 01 Feb 2007 10:54:00 +0800</pubDate>
       
       <guid>https://mikesu.net/10/</guid>
@@ -244,6 +270,7 @@
     <item>
       <title>中文分词的一些文章</title>
       <link>https://mikesu.net/9/</link>
+	  <relLink>/9/</relLink>
       <pubDate>Wed, 31 Jan 2007 15:14:00 +0800</pubDate>
       
       <guid>https://mikesu.net/9/</guid>
@@ -253,6 +280,7 @@
     <item>
       <title>eclipseUML 下载地址</title>
       <link>https://mikesu.net/8/</link>
+	  <relLink>/8/</relLink>
       <pubDate>Wed, 31 Jan 2007 14:11:00 +0800</pubDate>
       
       <guid>https://mikesu.net/8/</guid>
@@ -262,6 +290,7 @@
     <item>
       <title>我的最简Eclipse</title>
       <link>https://mikesu.net/7/</link>
+	  <relLink>/7/</relLink>
       <pubDate>Wed, 31 Jan 2007 13:52:00 +0800</pubDate>
       
       <guid>https://mikesu.net/7/</guid>
@@ -271,6 +300,7 @@
     <item>
       <title>eXtremeTable 的ec:tree的简单使用</title>
       <link>https://mikesu.net/6/</link>
+	  <relLink>/6/</relLink>
       <pubDate>Wed, 31 Jan 2007 10:50:00 +0800</pubDate>
       
       <guid>https://mikesu.net/6/</guid>
@@ -280,6 +310,7 @@
     <item>
       <title>MyEclipse 下载地址</title>
       <link>https://mikesu.net/5/</link>
+	  <relLink>/5/</relLink>
       <pubDate>Tue, 30 Jan 2007 17:08:00 +0800</pubDate>
       
       <guid>https://mikesu.net/5/</guid>
@@ -289,6 +320,7 @@
     <item>
       <title>HQL 的多对多查询的一点小经验</title>
       <link>https://mikesu.net/4/</link>
+	  <relLink>/4/</relLink>
       <pubDate>Tue, 30 Jan 2007 15:29:00 +0800</pubDate>
       
       <guid>https://mikesu.net/4/</guid>
@@ -298,6 +330,7 @@
     <item>
       <title>我的Thinking in Java 3rd 的学习笔记</title>
       <link>https://mikesu.net/3/</link>
+	  <relLink>/3/</relLink>
       <pubDate>Thu, 05 Jan 2006 17:08:00 +0800</pubDate>
       
       <guid>https://mikesu.net/3/</guid>
@@ -307,6 +340,7 @@
     <item>
       <title>FeedDemon 1.x 版本的通用破解</title>
       <link>https://mikesu.net/2/</link>
+	  <relLink>/2/</relLink>
       <pubDate>Sun, 24 Oct 2004 22:04:00 +0800</pubDate>
       
       <guid>https://mikesu.net/2/</guid>
@@ -316,6 +350,7 @@
     <item>
       <title>Hello World</title>
       <link>https://mikesu.net/1/</link>
+	  <relLink>/1/</relLink>
       <pubDate>Tue, 11 Jun 2002 15:30:00 +0800</pubDate>
       
       <guid>https://mikesu.net/1/</guid>
@@ -325,6 +360,7 @@
     <item>
       <title>About</title>
       <link>https://mikesu.net/about/</link>
+	  <relLink>/about/</relLink>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mikesu.net/about/</guid>
@@ -334,6 +370,7 @@
     <item>
       <title>归档</title>
       <link>https://mikesu.net/archives/</link>
+	  <relLink>/archives/</relLink>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mikesu.net/archives/</guid>
@@ -343,6 +380,7 @@
     <item>
       <title>搜索</title>
       <link>https://mikesu.net/search/</link>
+	  <relLink>/search/</relLink>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://mikesu.net/search/</guid>

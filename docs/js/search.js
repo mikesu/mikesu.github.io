@@ -43,7 +43,7 @@ $(document).ready(function () {
 				var item = $(this);
 				var title = item.find("title").text();
 				if (title.toLowerCase().indexOf(q.toLowerCase()) >= 0) {
-					var url = item.find("link").text();
+					var url = item.find("relLink").text();
 					var pubDate = new Date(item.find("pubDate").text()); 
 					var searchItem = `<li><span class="date">` + pubDate.Format("yyyy/MM/dd") + `</span>`;
 					searchItem += `<a href="` + url + `" class=\"search-result-title\">` + title + `</a></li>`;
